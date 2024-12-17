@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "FDEIoABp/ptejT2uuAKN3jMqyOMzklyxo2EsAQKEmRPtBko/Wi6IIlNXH6aRTC2Lw7Jos9Q0xGDSyAM3zfxvhA==",
+  "success": true,
+  "projectFilePath": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\leoch\\.nuget\\packages\\wpf-ui\\3.0.5\\wpf-ui.3.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
