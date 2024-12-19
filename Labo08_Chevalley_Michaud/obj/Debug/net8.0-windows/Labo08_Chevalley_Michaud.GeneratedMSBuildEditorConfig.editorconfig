@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Labo08_Chevalley_Michaud
-build_property.ProjectDir = C:\HEIG_VD\COURS\intgraph\Labo08_Chevalley_Michaud\Labo08_Chevalley_Michaud\
+build_property.ProjectDir = C:\HEIG_VD\COURS\intgraph\Labo08_Chevalley_Michaud\Labo08Intgraph\Labo08_Chevalley_Michaud\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

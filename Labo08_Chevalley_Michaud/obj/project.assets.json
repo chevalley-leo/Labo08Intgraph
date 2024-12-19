@@ -66,11 +66,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj",
+      "projectUniqueName": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj",
       "projectName": "Labo08_Chevalley_Michaud",
-      "projectPath": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj",
+      "projectPath": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj",
       "packagesPath": "C:\\Users\\leoch\\.nuget\\packages\\",
-      "outputPath": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud\\obj\\",
+      "outputPath": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\leoch\\AppData\\Roaming\\NuGet\\NuGet.Config",
