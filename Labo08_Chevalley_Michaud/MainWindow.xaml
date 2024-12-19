@@ -1,17 +1,86 @@
 ﻿<Window x:Class="Labo08_Chevalley_Michaud.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-        xmlns:local="clr-namespace:Labo08_Chevalley_Michaud"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Gestion de Coloration" Height="450" Width="800" Background="#333">
+
     <Grid>
-        
-        
-        
-        
-        
+        <DockPanel>
+
+            <!-- Barre d'outils en haut pour informations de connexion -->
+            <Grid VerticalAlignment="Top" Background="#444" Height="30" DockPanel.Dock="Top">
+                <TextBlock x:Name="TxtStatus" Text="Non connecté" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            </Grid>
+
+            <!-- TabControl -->
+            <TabControl DockPanel.Dock="Top" HorizontalAlignment="Stretch">
+                <TabControl.Resources>
+
+                    <!-- Style personnalisé pour le TabItem -->
+                    <Style TargetType="TabItem">
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontSize" Value="16"/>
+                        <Setter Property="Height" Value="40"/>
+
+                        <!-- Personnalisation du Header uniquement -->
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="TabItem">
+                                    <Border Name="Border" 
+                                            Background="#444" 
+                                            BorderThickness="0,0,1,0"
+                                            BorderBrush="Gray"
+                                            Padding="10,5">
+                                        <ContentPresenter ContentSource="Header" 
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <!-- Quand le TabItem est sélectionné -->
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="#444"/>
+                                            <Setter Property="Foreground" Value="White"/>
+                                        </Trigger>
+                                        <!-- Quand la souris est dessus -->
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="Border" Property="Background" Value="#555"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+
+                </TabControl.Resources>
+
+                <!-- Onglets -->
+                <TabItem Header="Connexion">
+                    <Grid Background="#333">
+                        <ContentControl x:Name="MainContent" />
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Accueil">
+                    <Grid Background="#333">
+                    </Grid>
+                </TabItem>
+
+
+                <TabItem Header="Job">
+                    <Grid Background="#333">
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Supervision">
+                    <Grid Background="#333">
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Configuration">
+                    <Grid Background="#333">
+                    </Grid>
+                </TabItem>
+
+            </TabControl>
+        </DockPanel>
     </Grid>
 </Window>

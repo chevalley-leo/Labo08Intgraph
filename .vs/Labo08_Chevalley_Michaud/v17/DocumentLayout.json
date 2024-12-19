@@ -11,6 +11,14 @@
       "RelativeMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|solutionrelative:labo08_chevalley_michaud\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|c:\\heig_vd\\cours\\intgraph\\labo08_chevalley_michaud\\labo08intgraph\\labo08_chevalley_michaud\\logincontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|solutionrelative:labo08_chevalley_michaud\\logincontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|c:\\heig_vd\\cours\\intgraph\\labo08_chevalley_michaud\\labo08intgraph\\labo08_chevalley_michaud\\logincontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|solutionrelative:labo08_chevalley_michaud\\logincontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|c:\\heig_vd\\cours\\intgraph\\labo08_chevalley_michaud\\labo08intgraph\\labo08_chevalley_michaud\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|solutionrelative:labo08_chevalley_michaud\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
@@ -22,8 +30,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginControl.xaml.cs",
+              "DocumentMoniker": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\LoginControl.xaml.cs",
+              "RelativeDocumentMoniker": "Labo08_Chevalley_Michaud\\LoginControl.xaml.cs",
+              "ToolTip": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\LoginControl.xaml.cs",
+              "RelativeToolTip": "Labo08_Chevalley_Michaud\\LoginControl.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T13:20:53.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginControl.xaml",
+              "DocumentMoniker": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\LoginControl.xaml",
+              "RelativeDocumentMoniker": "Labo08_Chevalley_Michaud\\LoginControl.xaml",
+              "ToolTip": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\LoginControl.xaml",
+              "RelativeToolTip": "Labo08_Chevalley_Michaud\\LoginControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-19T13:20:03.11Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -32,14 +69,10 @@
               "RelativeDocumentMoniker": "Labo08_Chevalley_Michaud\\MainWindow.xaml.cs",
               "ToolTip": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\MainWindow.xaml.cs",
               "RelativeToolTip": "Labo08_Chevalley_Michaud\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-19T13:06:13.397Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
@@ -50,12 +83,12 @@
               "ToolTip": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\MainWindow.xaml",
               "RelativeToolTip": "Labo08_Chevalley_Michaud\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-19T13:05:54.069Z",
+              "WhenOpened": "2024-12-19T13:25:47.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\App.xaml",
               "RelativeDocumentMoniker": "Labo08_Chevalley_Michaud\\App.xaml",
