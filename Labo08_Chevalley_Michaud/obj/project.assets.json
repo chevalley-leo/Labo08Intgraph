@@ -61,19 +61,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leoch\\.nuget\\packages\\": {}
+    "C:\\Users\\damie\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj",
+      "projectUniqueName": "C:\\Users\\damie\\Documents\\HEIG\\3eme\\IntGraph\\Labos\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj",
       "projectName": "Labo08_Chevalley_Michaud",
-      "projectPath": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj",
-      "packagesPath": "C:\\Users\\leoch\\.nuget\\packages\\",
-      "outputPath": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\obj\\",
+      "projectPath": "C:\\Users\\damie\\Documents\\HEIG\\3eme\\IntGraph\\Labos\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj",
+      "packagesPath": "C:\\Users\\damie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\damie\\Documents\\HEIG\\3eme\\IntGraph\\Labos\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\leoch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\damie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -81,6 +86,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -98,7 +104,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -128,7 +135,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
