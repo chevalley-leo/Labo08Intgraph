@@ -4,6 +4,7 @@
   "Documents": [
     {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|c:\\heig_vd\\cours\\intgraph\\labo08_chevalley_michaud\\labo08intgraph\\labo08_chevalley_michaud\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|solutionrelative:labo08_chevalley_michaud\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,6 +20,16 @@
       "RelativeMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|solutionrelative:labo08_chevalley_michaud\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+=======
+      "AbsoluteMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|c:\\users\\damie\\documents\\heig\\3eme\\intgraph\\labos\\labo08intgraph\\labo08_chevalley_michaud\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|solutionrelative:labo08_chevalley_michaud\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|c:\\users\\damie\\documents\\heig\\3eme\\intgraph\\labos\\labo08intgraph\\labo08_chevalley_michaud\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|solutionrelative:labo08_chevalley_michaud\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|c:\\users\\damie\\documents\\heig\\3eme\\intgraph\\labos\\labo08intgraph\\labo08_chevalley_michaud\\logincontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|solutionrelative:labo08_chevalley_michaud\\logincontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },

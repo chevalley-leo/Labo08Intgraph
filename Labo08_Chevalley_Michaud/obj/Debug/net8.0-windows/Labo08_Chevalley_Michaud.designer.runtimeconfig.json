@@ -13,7 +13,11 @@
     ],
     "additionalProbingPaths": [
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "C:\\Users\\leoch\\.dotnet\\store\\|arch|\\|tfm|",
+=======
+      "C:\\Users\\damie\\.dotnet\\store\\|arch|\\|tfm|",
+>>>>>>> Stashed changes
 =======
       "C:\\Users\\damie\\.dotnet\\store\\|arch|\\|tfm|",
 >>>>>>> Stashed changes

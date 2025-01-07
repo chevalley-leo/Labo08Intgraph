@@ -61,7 +61,11 @@ namespace Labo08_Chevalley_Michaud {
                 return;
             }
             _contentLoaded = true;
+<<<<<<< Updated upstream:Labo08_Chevalley_Michaud/obj/Debug/net8.0-windows/Overview.g.cs
             System.Uri resourceLocater = new System.Uri("/Labo08_Chevalley_Michaud;component/overview.xaml", System.UriKind.Relative);
+=======
+            System.Uri resourceLocater = new System.Uri("/Labo08_Chevalley_Michaud;V1.0.0.0;component/logincontrol.xaml", System.UriKind.Relative);
+>>>>>>> Stashed changes:Labo08_Chevalley_Michaud/obj/Debug/net8.0-windows/LoginControl.g.i.cs
             
             #line 1 "..\..\..\Overview.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
