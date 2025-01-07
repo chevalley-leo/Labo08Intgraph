@@ -16,8 +16,10 @@ namespace Labo08_Chevalley_Michaud
         private void LoadLoginPage()
         {
             var loginPage = new LoginControl();
+            var OverviewPage = new Overview();
             loginPage.OnLoginSuccess += HandleLoginSuccess;
             MainContent.Content = loginPage;
+            OverviewContent.Content = OverviewPage;
             TxtStatus.Text = "Non connecté";
         }
 
