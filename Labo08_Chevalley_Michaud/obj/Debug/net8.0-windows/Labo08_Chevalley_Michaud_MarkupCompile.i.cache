@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\HEIG_VD\COURS\intgraph\Labo08_Chevalley_Michaud\Labo08Intgraph\Labo08_Chevalley_Michaud\App.xaml
-2-1880212300
+3-1126266900
 
-12-2087101024
+13-706776138
 1991298255367
-LoginControl.xaml;MainWindow.xaml;
+JobControl.xaml;LoginControl.xaml;MainWindow.xaml;
 
-True
+False
 

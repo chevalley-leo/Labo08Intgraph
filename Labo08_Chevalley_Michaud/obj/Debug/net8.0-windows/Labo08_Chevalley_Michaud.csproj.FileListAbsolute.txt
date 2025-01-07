@@ -23,3 +23,6 @@ C:\HEIG_VD\COURS\intgraph\Labo08_Chevalley_Michaud\Labo08Intgraph\Labo08_Chevall
 C:\HEIG_VD\COURS\intgraph\Labo08_Chevalley_Michaud\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\Labo08_Chevalley_Michaud.pdb
 C:\HEIG_VD\COURS\intgraph\Labo08_Chevalley_Michaud\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\Labo08_Chevalley_Michaud.genruntimeconfig.cache
 C:\HEIG_VD\COURS\intgraph\Labo08_Chevalley_Michaud\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\ref\Labo08_Chevalley_Michaud.dll
+C:\HEIG_VD\COURS\intgraph\Labo08_Chevalley_Michaud\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\JobControl.baml
+C:\HEIG_VD\COURS\intgraph\Labo08_Chevalley_Michaud\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\JobControl.g.cs
+C:\HEIG_VD\COURS\intgraph\Labo08_Chevalley_Michaud\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\Labo08_Chevalley_Michaud_MarkupCompile.lref
