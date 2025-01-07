@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Labo08_Chevalley_Michaud")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0b98197f1dc9b84d0ebd8ebd852fcd6cf28bc70")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a72e989fbd024b4557a5c222cd9cbfe7bd6f67e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Labo08_Chevalley_Michaud")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Labo08_Chevalley_Michaud")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
