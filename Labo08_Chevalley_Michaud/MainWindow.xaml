@@ -55,7 +55,7 @@
                 <!-- Onglets -->
                 <TabItem Header="Connexion">
                     <Grid Background="#333">
-                        <ContentControl x:Name="MainContent" />
+                        <ContentControl x:Name="Connexion" />
                     </Grid>
                 </TabItem>
 
@@ -67,8 +67,10 @@
 
                 <TabItem Header="Job">
                     <Grid Background="#333">
+                        <ContentControl x:Name="Job"/>
                     </Grid>
                 </TabItem>
+
 
                 <TabItem Header="Supervision">
                     <Grid Background="#333">

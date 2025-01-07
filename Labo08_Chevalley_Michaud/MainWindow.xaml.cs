@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using Labo08_Chevalley_Michaud.Views;
 
 namespace Labo08_Chevalley_Michaud
@@ -17,9 +18,16 @@ namespace Labo08_Chevalley_Michaud
         {
             var loginPage = new LoginControl();
             loginPage.OnLoginSuccess += HandleLoginSuccess;
-            MainContent.Content = loginPage;
+            Connexion.Content = loginPage;
             TxtStatus.Text = "Non connecté";
         }
+
+        private void LoadJobPage()
+        {
+            var jobPage = new JobControl(); // Instancier JobControl
+            Job.Content = jobPage;  // L'ajouter au ContentControl
+        }
+
 
         private void HandleLoginSuccess(string profile)
         {
@@ -30,6 +38,8 @@ namespace Labo08_Chevalley_Michaud
 
         private void LoadHomePage()
         {
+            LoadJobPage();
+
             if (currentUserProfile == "Administrateur")
             {
                 // Charge la page d'options si admin
@@ -41,5 +51,7 @@ namespace Labo08_Chevalley_Michaud
                // MainContent.Content = new HomePage();
             }
         }
+
+
     }
 }
