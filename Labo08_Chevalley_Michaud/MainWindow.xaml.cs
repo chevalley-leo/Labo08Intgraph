@@ -41,5 +41,10 @@ namespace Labo08_Chevalley_Michaud
                // MainContent.Content = new HomePage();
             }
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            ThreadMachine.Instance.StopThread=false;
+        }
     }
 }
