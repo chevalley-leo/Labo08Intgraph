@@ -8,6 +8,14 @@ using System.Threading.Tasks;
 
 namespace Labo08_Chevalley_Michaud
 {
+    public enum PigmentType
+    {
+        None,
+        A,
+        B,
+        C,
+        D
+    }
     public class MachinePainting
     {
         

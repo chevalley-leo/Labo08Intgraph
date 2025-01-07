@@ -6,10 +6,13 @@ C:\Users\damie\Documents\HEIG\3eme\IntGraph\Labos\Labo08Intgraph\Labo08_Chevalle
 C:\Users\damie\Documents\HEIG\3eme\IntGraph\Labos\Labo08Intgraph\Labo08_Chevalley_Michaud\bin\Debug\net8.0-windows\Wpf.Ui.dll
 C:\Users\damie\Documents\HEIG\3eme\IntGraph\Labos\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\Labo08_Chevalley_Michaud.csproj.AssemblyReference.cache
 C:\Users\damie\Documents\HEIG\3eme\IntGraph\Labos\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\damie\Documents\HEIG\3eme\IntGraph\Labos\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\Overview.g.cs
 C:\Users\damie\Documents\HEIG\3eme\IntGraph\Labos\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\damie\Documents\HEIG\3eme\IntGraph\Labos\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\damie\Documents\HEIG\3eme\IntGraph\Labos\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\Labo08_Chevalley_Michaud_MarkupCompile.cache
 C:\Users\damie\Documents\HEIG\3eme\IntGraph\Labos\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\Labo08_Chevalley_Michaud_MarkupCompile.lref
 C:\Users\damie\Documents\HEIG\3eme\IntGraph\Labos\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\damie\Documents\HEIG\3eme\IntGraph\Labos\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\Overview.baml
 C:\Users\damie\Documents\HEIG\3eme\IntGraph\Labos\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\Labo08_Chevalley_Michaud.g.resources
 C:\Users\damie\Documents\HEIG\3eme\IntGraph\Labos\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\Labo08_Chevalley_Michaud.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\damie\Documents\HEIG\3eme\IntGraph\Labos\Labo08Intgraph\Labo08_Chevalley_Michaud\obj\Debug\net8.0-windows\Labo08_Chevalley_Michaud.AssemblyInfoInputs.cache
