@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< Updated upstream
   "WorkspaceRootPath": "C:\\Users\\damie\\Documents\\HEIG\\3eme\\IntGraph\\Labos\\Labo08Intgraph\\",
   "Documents": [
     {
@@ -35,6 +36,28 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|c:\\users\\damie\\documents\\heig\\3eme\\intgraph\\labos\\labo08intgraph\\labo08_chevalley_michaud\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+=======
+  "WorkspaceRootPath": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|c:\\heig_vd\\cours\\intgraph\\labo08_chevalley_michaud\\labo08intgraph\\labo08_chevalley_michaud\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|solutionrelative:labo08_chevalley_michaud\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|c:\\heig_vd\\cours\\intgraph\\labo08_chevalley_michaud\\labo08intgraph\\labo08_chevalley_michaud\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|solutionrelative:labo08_chevalley_michaud\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|c:\\heig_vd\\cours\\intgraph\\labo08_chevalley_michaud\\labo08intgraph\\labo08_chevalley_michaud\\logincontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|solutionrelative:labo08_chevalley_michaud\\logincontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|c:\\heig_vd\\cours\\intgraph\\labo08_chevalley_michaud\\labo08intgraph\\labo08_chevalley_michaud\\logincontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|solutionrelative:labo08_chevalley_michaud\\logincontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|c:\\heig_vd\\cours\\intgraph\\labo08_chevalley_michaud\\labo08intgraph\\labo08_chevalley_michaud\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+>>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{EDC46105-5639-4044-B7D9-BEC458694B65}|Labo08_Chevalley_Michaud\\Labo08_Chevalley_Michaud.csproj|solutionrelative:labo08_chevalley_michaud\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -45,7 +68,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 5,
+=======
+          "SelectedChildIndex": 4,
+>>>>>>> Stashed changes
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,6 +81,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+<<<<<<< Updated upstream
               "Title": "Overview.xaml.cs",
               "DocumentMoniker": "C:\\Users\\damie\\Documents\\HEIG\\3eme\\IntGraph\\Labos\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\Overview.xaml.cs",
               "RelativeDocumentMoniker": "Labo08_Chevalley_Michaud\\Overview.xaml.cs",
@@ -109,10 +137,21 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-24T12:06:53.308Z",
+=======
+              "Title": "LoginControl.xaml.cs",
+              "DocumentMoniker": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\LoginControl.xaml.cs",
+              "RelativeDocumentMoniker": "Labo08_Chevalley_Michaud\\LoginControl.xaml.cs",
+              "ToolTip": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\LoginControl.xaml.cs",
+              "RelativeToolTip": "Labo08_Chevalley_Michaud\\LoginControl.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T13:20:53.522Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 5,
               "Title": "MachinePainting.cs",
               "DocumentMoniker": "C:\\Users\\damie\\Documents\\HEIG\\3eme\\IntGraph\\Labos\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\MachinePainting.cs",
@@ -122,11 +161,23 @@
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwB4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-19T14:19:37.131Z"
+=======
+              "DocumentIndex": 2,
+              "Title": "LoginControl.xaml",
+              "DocumentMoniker": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\LoginControl.xaml",
+              "RelativeDocumentMoniker": "Labo08_Chevalley_Michaud\\LoginControl.xaml",
+              "ToolTip": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\LoginControl.xaml",
+              "RelativeToolTip": "Labo08_Chevalley_Michaud\\LoginControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-19T13:20:03.11Z",
+              "EditorCaption": ""
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
+<<<<<<< Updated upstream
               "DocumentMoniker": "C:\\Users\\damie\\Documents\\HEIG\\3eme\\IntGraph\\Labos\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Labo08_Chevalley_Michaud\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\damie\\Documents\\HEIG\\3eme\\IntGraph\\Labos\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\MainWindow.xaml.cs",
@@ -134,10 +185,33 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-19T13:06:13.397Z"
+=======
+              "DocumentMoniker": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Labo08_Chevalley_Michaud\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Labo08_Chevalley_Michaud\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T13:06:13.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Labo08_Chevalley_Michaud\\MainWindow.xaml",
+              "ToolTip": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\MainWindow.xaml",
+              "RelativeToolTip": "Labo08_Chevalley_Michaud\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-19T13:25:47.9Z",
+              "EditorCaption": ""
+>>>>>>> Stashed changes
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+<<<<<<< Updated upstream
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\damie\\Documents\\HEIG\\3eme\\IntGraph\\Labos\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Labo08_Chevalley_Michaud\\MainWindow.xaml",
@@ -156,6 +230,16 @@
               "RelativeToolTip": "Labo08_Chevalley_Michaud\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-12-19T13:05:49.17Z"
+=======
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\App.xaml",
+              "RelativeDocumentMoniker": "Labo08_Chevalley_Michaud\\App.xaml",
+              "ToolTip": "C:\\HEIG_VD\\COURS\\intgraph\\Labo08_Chevalley_Michaud\\Labo08Intgraph\\Labo08_Chevalley_Michaud\\App.xaml",
+              "RelativeToolTip": "Labo08_Chevalley_Michaud\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-19T13:05:49.17Z",
+              "EditorCaption": ""
+>>>>>>> Stashed changes
             }
           ]
         }
