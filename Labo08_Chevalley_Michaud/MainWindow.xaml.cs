@@ -52,6 +52,13 @@ namespace Labo08_Chevalley_Michaud
             }
         }
 
+<<<<<<< HEAD
 
+=======
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            ThreadMachine.Instance.StopThread=false;
+        }
+>>>>>>> 6deef6806d008a979bcd5b23228828e71aca1a31
     }
 }
