@@ -74,6 +74,7 @@
 
                 <TabItem Header="Supervision">
                     <Grid Background="#333">
+                        <ContentControl x:Name="OverviewContent" />
                     </Grid>
                 </TabItem>
 
