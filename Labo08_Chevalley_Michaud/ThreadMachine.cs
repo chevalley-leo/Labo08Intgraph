@@ -35,7 +35,8 @@ namespace Labo08_Chevalley_Michaud
             {
                 switch (machineState){
                     case MachineState.waiting:
-
+                        Thread.Sleep(2000);
+                        machineState = MachineState.askbucket;
                         break;
                     case MachineState.waitingBucket:
                         if(machinePainting.BucketLocked)
@@ -74,6 +75,7 @@ namespace Labo08_Chevalley_Michaud
                 }
                 if (value == false)
                 {
+                    _stopThread = false;
                     _thread.Join();
                 }
             }
