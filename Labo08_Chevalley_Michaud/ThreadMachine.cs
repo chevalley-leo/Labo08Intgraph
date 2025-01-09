@@ -22,7 +22,6 @@ namespace Labo08_Chevalley_Michaud
         const string ipaddress = "127.0.0.1";
         const int port = 9999;
 
-
         private ThreadMachine()
         {
             _thread = new Thread(Run);
@@ -31,12 +30,14 @@ namespace Labo08_Chevalley_Michaud
         private void Run() {
             MachineState machineState = MachineState.waitingBucket;
             MachinePainting machinePainting = new MachinePainting(ipaddress, port);
+
             while (StopThread)
             {
                 switch (machineState){
                     case MachineState.waiting:
-                        Thread.Sleep(2000);
-                        machineState = MachineState.askbucket;
+                        if(Start==true)
+                            machineState = MachineState.askbucket;
+                            Start = false;
                         break;
                     case MachineState.waitingBucket:
                         if(machinePainting.BucketLocked)
@@ -120,7 +121,30 @@ namespace Labo08_Chevalley_Michaud
                 }
             }
         }
+
+        private readonly object _lockStart = new object();
+        private bool _start;
+        public bool Start
+        {
+            get
+            {
+                lock (_lockStart)
+                {
+                    return _start;
+                }
+            }
+            set
+            {
+                lock (_lockStart)
+                {
+                    _start = value;
+                }
+            }
+        }
+
+        
         public static ThreadMachine Instance => _instance.Value;
+
 
         ~ThreadMachine(){
             StopThread = false;

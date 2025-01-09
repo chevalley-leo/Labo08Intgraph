@@ -30,5 +30,9 @@ namespace Labo08_Chevalley_Michaud
             if (ThreadMachine.Instance.Connected) { ConnectElips.Fill = new SolidColorBrush(Colors.Green); }
             else { ConnectElips.Fill = new SolidColorBrush(Colors.Red); }
         }
+        private void Start_Click(object sender, RoutedEventArgs e)
+        {
+            ThreadMachine.Instance.Start = true;
+        }
     }
 }
