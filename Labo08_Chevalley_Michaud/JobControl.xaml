@@ -9,7 +9,8 @@
              MaxWidth="{Binding ActualWidth, ElementName=MainWindow}"
              MaxHeight="{Binding ActualHeight, ElementName=MainWindow}">
 
-        <Grid>
+
+    <Grid>
             <Border CornerRadius="10" Background="#444" Padding="20">
                 <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <TextBlock Text="Job Management" FontSize="18" Foreground="White" HorizontalAlignment="Center" Margin="0,0,0,20"/>
@@ -17,16 +18,16 @@
                     <DockPanel>
 
                         <!-- Boutons -->
-                        <Button Content="Charger les jobs" Width="200" HorizontalAlignment="Center" Margin="0,10,0,0" Click="LoadJobButton_Click" DockPanel.Dock="Top"/>
-                        <Button Content="Démarrer le job" Width="200" HorizontalAlignment="Center" Click="StartJobButton_Click" DockPanel.Dock="Top"/>
+                        <ui:Button Content="Charger les jobs" Width="200" HorizontalAlignment="Center" Margin="0,10,0,10" Click="LoadJobButton_Click" DockPanel.Dock="Top"/>
+                        <ui:Button Content="Démarrer le job" Width="200" HorizontalAlignment="Center" Click="StartJobButton_Click" DockPanel.Dock="Top"/>
 
                         <!-- Contenu du Job -->
                         <TextBlock Text="Informations sur le job" Foreground="White" Margin="0,0,0,10" DockPanel.Dock="Top"/>
 
 
                         <!-- Main Content Area -->
-                        <Grid Background="#999" HorizontalAlignment="Stretch" DockPanel.Dock="Bottom" VerticalAlignment="Bottom" MaxHeight="180">
-                            <ui:ListView Name="BatchListView" ItemsSource="{Binding Batches}" Margin="10" Background="#999" Foreground="White"
+                        <Grid HorizontalAlignment="Stretch" DockPanel.Dock="Bottom" VerticalAlignment="Bottom" MaxHeight="180" Background="#FF444444">
+                            <ui:ListView Name="BatchListView" ItemsSource="{Binding Batches}" Margin="10" Background="Transparent" Foreground="White"
                                          SelectionChanged="BatchListView_SelectionChanged"
 >>
 
