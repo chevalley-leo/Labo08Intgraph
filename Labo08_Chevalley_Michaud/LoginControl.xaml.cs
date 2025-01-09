@@ -18,6 +18,7 @@ namespace Labo08_Chevalley_Michaud.Views
         public LoginControl()
         {
             InitializeComponent();
+
         }
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
