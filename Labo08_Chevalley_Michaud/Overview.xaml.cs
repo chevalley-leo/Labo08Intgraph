@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Labo08_Chevalley_Michaud
 {
@@ -20,9 +21,18 @@ namespace Labo08_Chevalley_Michaud
     /// </summary>
     public partial class Overview : UserControl
     {
+        private DispatcherTimer updateTimer;
         public Overview()
         {
+
             InitializeComponent();
+            // Initialize the timer
+            updateTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(1) // Set update interval (e.g., every second)
+            };
+            updateTimer.Tick += UpdateVisuals; // Attach event handler
+            updateTimer.Start(); // Start the timer
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -34,5 +44,15 @@ namespace Labo08_Chevalley_Michaud
         {
             ThreadMachine.Instance.Start = true;
         }
-    }
+
+        private void UpdateVisuals(object sender, EventArgs e)
+        {
+            // Update your UI elements here
+            // Example: Update a label to show the current time
+            if (ThreadMachine.Instance.Connected) { ConnectElips.Fill = new SolidColorBrush(Colors.Green); }
+            else { ConnectElips.Fill = new SolidColorBrush(Colors.Red); }
+            
+
+        }
+    } 
 }

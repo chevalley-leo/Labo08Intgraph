@@ -9,7 +9,7 @@ namespace Labo08_Chevalley_Michaud.Views
     public partial class JobControl : UserControl
     {
         private BatchFileService batchFileService;
-        private ObservableCollection<Batch> Batches;
+        //private ObservableCollection<Batch> Batches;
         private const string BatchFilePath = "batches.xml";
         private int NextBatchID { get; set; } = 1;
 
@@ -20,7 +20,7 @@ namespace Labo08_Chevalley_Michaud.Views
             SetupBatchListView();
 
             batchFileService = new BatchFileService();
-            Batches = new ObservableCollection<Batch>();
+            //Batches = new ObservableCollection<Batch>();
 
         }
 
@@ -28,7 +28,7 @@ namespace Labo08_Chevalley_Michaud.Views
         {
             BatchListView.SelectionChanged += BatchListView_SelectionChanged;
             BatchListView.Items.Clear();
-            BatchListView.ItemsSource = Batches;
+            BatchListView.ItemsSource = ThreadMachine.Instance.Baches;
         }
 
 
@@ -82,15 +82,15 @@ namespace Labo08_Chevalley_Michaud.Views
             }
 
 
-            Batches = Batches ?? [];
+            ThreadMachine.Instance.Baches = ThreadMachine.Instance.Baches ?? [];
 
             ClearBatchListView();
 
             try
             {
                 LoadBatches(batchList.GetBatches());
-                NextBatchID = Batches.Max(batch => batch.ID) + 1;
-                BatchListView.ItemsSource = Batches;
+                NextBatchID = ThreadMachine.Instance.Baches.Max(batch => batch.ID) + 1;
+                BatchListView.ItemsSource = ThreadMachine.Instance.Baches;
             }
             catch (Exception ex)
             {
@@ -104,14 +104,14 @@ namespace Labo08_Chevalley_Michaud.Views
             {
                 if (batch != null)
                 {
-                    Batches.Add(batch);
+                    ThreadMachine.Instance.Baches.Add(batch);
                 }
             }
         }
         private void ClearBatchListView()
         {
             BatchListView.ItemsSource = null;
-            Batches.Clear();
+            ThreadMachine.Instance.Baches.Clear();
         }
         private void BatchListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

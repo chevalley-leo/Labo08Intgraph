@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Labo06;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -8,11 +10,12 @@ using System.Threading.Tasks;
 namespace Labo08_Chevalley_Michaud
 {
     public enum MachineState
-{
+    {
         waiting,
         waitingBucket,
         askbucket,
-}
+        PaintA,
+    }
 
     public class ThreadMachine
     {
@@ -21,40 +24,133 @@ namespace Labo08_Chevalley_Michaud
         private Thread _thread;
         const string ipaddress = "127.0.0.1";
         const int port = 9999;
-
+        private ObservableCollection<Batch> _ShareBatches=new ObservableCollection<Batch>();
         private ThreadMachine()
         {
             _thread = new Thread(Run);
             _thread.Start();
+            _ShareBatches.Add(new Batch { ID=1,BucketCount=3, Recipe=new Recipe { PigmentA=20, PigmentB=3,PigmentC=4, PigmentD=4} });
         }
         private void Run() {
-            MachineState machineState = MachineState.waitingBucket;
+            MachineState machineState = MachineState.waiting;
             MachinePainting machinePainting = new MachinePainting(ipaddress, port);
+            
 
             while (StopThread)
             {
                 switch (machineState){
                     case MachineState.waiting:
-                        if(Start==true)
+                        if (Start == true)
+                        {
+                            IndexBatch = 0;
+                            NumberBucket = 0;
                             machineState = MachineState.askbucket;
                             Start = false;
-                        break;
-                    case MachineState.waitingBucket:
-                        if(machinePainting.BucketLocked)
-                            BucketPresent = true;
-                            machineState = MachineState.waiting;
+                        }
+                            
                         break;
 
                     case MachineState.askbucket:
-                        machinePainting.ConveyorOn=true;
-                        machineState=MachineState.waitingBucket;
+                        machinePainting.ConveyorOn = true;
+                        machineState = MachineState.waitingBucket;
                         break;
+
+                    case MachineState.waitingBucket:
+                        if (machinePainting.BucketLocked)
+                        {
+                            BucketPresent = true;
+                            machineState = MachineState.PaintA;
+                        }
+                        break;
+
+                    case MachineState.PaintA:
+                        if (Baches.Count>1)
+                        {
+
+                            dispensePaint(PigmentType.A, (int)(Baches[IndexBatch].Recipe.PigmentA * 100), machinePainting);
+                            dispensePaint(PigmentType.B, (int)(Baches[IndexBatch].Recipe.PigmentB * 100), machinePainting);
+                            dispensePaint(PigmentType.C, (int)(Baches[IndexBatch].Recipe.PigmentC * 100), machinePainting);
+                            dispensePaint(PigmentType.D, (int)(Baches[IndexBatch].Recipe.PigmentD * 100), machinePainting);
+                            if (NumberBucket < Baches[0].BucketCount-1)
+                            {
+                                NumberBucket++;
+                                machineState = MachineState.askbucket;
+                            }
+                            else
+                            {
+                                IndexBatch++;
+                                if (IndexBatch<Baches.Count)
+                                {
+                                    machineState = MachineState.askbucket;
+                                }
+                                else
+                                {
+                                    machineState = MachineState.waiting;
+                                }
+                                
+                            }
+                        }
+                        else
+                        {
+                            machineState = MachineState.waiting;
+                        }
+                        break;
+
+
                 }
                 Thread.Sleep(100);
                 Connected = machinePainting.Connected;
-                
             }
+        }
 
+        private void dispensePaint(PigmentType type,int sleepDelay,MachinePainting machinePainting)
+        {
+            if (sleepDelay > 0)
+            {
+                machinePainting.PigmentDispenced = type;
+                Thread.Sleep(sleepDelay);
+                machinePainting.PigmentDispenced = PigmentType.None;
+            }
+        }
+
+        private readonly object _lockIndexBatch = new object();
+        private int _indexBatch;
+        public int IndexBatch
+        {
+            get
+            {
+                lock (_lockIndexBatch)
+                {
+                    return _indexBatch;
+                }
+            }
+            set
+            {
+                lock (_lockIndexBatch)
+                {
+                    _indexBatch = value;
+                }
+            }
+        }
+
+        private readonly object _lockNumberBucket = new object();
+        private int _numberBucket;
+        public int NumberBucket
+        {
+            get
+            {
+                lock (_lockNumberBucket)
+                {
+                    return _numberBucket;
+                }
+            }
+            set
+            {
+                lock (_lockNumberBucket)
+                {
+                    _numberBucket = value;
+                }
+            }
         }
 
         private readonly object _lockStop = new object();
@@ -142,7 +238,27 @@ namespace Labo08_Chevalley_Michaud
             }
         }
 
-        
+        private readonly object _lockBaches = new object();
+
+        public ObservableCollection<Batch> Baches
+        {
+            get
+            {
+                lock (_lockBaches)
+                {
+                    return _ShareBatches;
+                }
+            }
+            set
+            {
+                lock (_lockBaches)
+                {
+                    _ShareBatches = value;
+                }
+            }
+        }
+
+
         public static ThreadMachine Instance => _instance.Value;
 
 
