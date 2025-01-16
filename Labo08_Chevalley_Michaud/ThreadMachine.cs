@@ -15,6 +15,9 @@ namespace Labo08_Chevalley_Michaud
         waitingBucket,
         askbucket,
         PaintA,
+        PaintB,
+        PaintC,
+        PaintD,
     }
 
     public class ThreadMachine
@@ -68,8 +71,23 @@ namespace Labo08_Chevalley_Michaud
                         {
 
                             dispensePaint(PigmentType.A, (int)(Baches[IndexBatch].Recipe.PigmentA * 100), machinePainting);
+                        }
+                        machineState = MachineState.PaintB;
+                        break;
+                    case MachineState.PaintB:
+                         if (Baches.Count > 1)
                             dispensePaint(PigmentType.B, (int)(Baches[IndexBatch].Recipe.PigmentB * 100), machinePainting);
+                        machineState = MachineState.PaintC;
+                        break;
+                    case MachineState.PaintC:
+                        if (Baches.Count > 1)
                             dispensePaint(PigmentType.C, (int)(Baches[IndexBatch].Recipe.PigmentC * 100), machinePainting);
+                        machineState = MachineState.PaintD;
+                        break;
+                            
+                    case MachineState.PaintD:
+                        if (Baches.Count > 1)
+                        {
                             dispensePaint(PigmentType.D, (int)(Baches[IndexBatch].Recipe.PigmentD * 100), machinePainting);
                             if (NumberBucket < Baches[0].BucketCount - 1)
                             {
