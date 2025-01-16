@@ -4,33 +4,30 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-             Background="#333"
-             Width="800"
-             MaxWidth="{Binding ActualWidth, ElementName=MainWindow}"
-             MaxHeight="{Binding ActualHeight, ElementName=MainWindow}">
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Background="#333">
 
 
     <Grid>
-            <Border CornerRadius="10" Background="#444" Padding="20">
-                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <TextBlock Text="Job Management" FontSize="18" Foreground="White" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+        <Border CornerRadius="10" Background="#444" Padding="20">
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <TextBlock Text="Job Management" FontSize="18" Foreground="White" HorizontalAlignment="Center" Margin="0,0,0,20"/>
 
-                    <DockPanel>
+                <DockPanel>
 
-                        <!-- Boutons -->
-                        <ui:Button Content="Charger les jobs" Width="200" HorizontalAlignment="Center" Margin="0,10,0,10" Click="LoadJobButton_Click" DockPanel.Dock="Top"/>
-                        <ui:Button Content="Démarrer le job" Width="200" HorizontalAlignment="Center" Click="StartJobButton_Click" DockPanel.Dock="Top"/>
+                    <!-- Boutons -->
+                    <ui:Button Content="Charger les jobs" Width="200" HorizontalAlignment="Center" Margin="0,10,0,10" Click="LoadJobButton_Click" DockPanel.Dock="Top"/>
+                    <ui:Button Content="Démarrer le job" Width="200" HorizontalAlignment="Center" Click="StartJobButton_Click" DockPanel.Dock="Top"/>
 
-                        <!-- Contenu du Job -->
-                        <TextBlock Text="Informations sur le job" Foreground="White" Margin="0,0,0,10" DockPanel.Dock="Top"/>
+                    <!-- Contenu du Job -->
+                    <TextBlock Text="Informations sur le job" Foreground="White" Margin="0,0,0,10" DockPanel.Dock="Top"/>
 
 
-                        <!-- Main Content Area -->
-                        <Grid HorizontalAlignment="Stretch" DockPanel.Dock="Bottom" VerticalAlignment="Bottom" MaxHeight="180" Background="#FF444444">
-                            <ui:ListView Name="BatchListView" ItemsSource="{Binding Batches}" Margin="10" Background="Transparent" Foreground="White"
-                                         SelectionChanged="BatchListView_SelectionChanged"
->>
-
+                    <!-- Main Content Area -->
+                    <Grid DockPanel.Dock="Bottom" Background="#FF444444">
+                        
+                        <ui:ListView Name="BatchListView" ItemsSource="{Binding Baches}" Margin="10" Background="#444" Foreground="White"
+                                      SelectionChanged="BatchListView_SelectionChanged" VerticalAlignment="Stretch" MaxHeight="220">
                                 <ui:ListView.View>
                                     <ui:GridView>
                                         <!-- ID Column -->
@@ -66,13 +63,23 @@
                                                 </DataTemplate>
                                             </ui:GridViewColumn.CellTemplate>
                                         </ui:GridViewColumn>
+
+                                        <!-- Couleur Calculée -->
+                                        <ui:GridViewColumn Header="Couleur" Width="70">
+                                            <ui:GridViewColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <Border Background="{Binding ResultingColor}" Width="30" Height="30"/>
+                                                </DataTemplate>
+                                            </ui:GridViewColumn.CellTemplate>
+                                        </ui:GridViewColumn>
+
                                     </ui:GridView>
                                 </ui:ListView.View>
                             </ui:ListView>
-                        </Grid>
+                    </Grid>
 
-                    </DockPanel>
-                </StackPanel>
-            </Border>
-        </Grid>
+                </DockPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
 </UserControl>

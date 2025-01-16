@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Windows;
+using System.Windows.Media;
 using System.Xml;
 
 namespace Labo06
@@ -11,6 +12,8 @@ namespace Labo06
         public int ID { get; set; }
         public Recipe Recipe { get; set; } = new Recipe();
         public int BucketCount { get; set; }
+
+        public SolidColorBrush ResultingColor { get; set; }
         public string RecipeSummary =>
             $"A: {Recipe.PigmentA}, B: {Recipe.PigmentB}, C: {Recipe.PigmentC}, D: {Recipe.PigmentD}";
 
