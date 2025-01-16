@@ -24,21 +24,21 @@ namespace Labo08_Chevalley_Michaud
         private Thread _thread;
         const string ipaddress = "127.0.0.1";
         const int port = 9999;
-        private ObservableCollection<Batch> _ShareBatches=new ObservableCollection<Batch>();
+        private ObservableCollection<Batch> _ShareBatches = new ObservableCollection<Batch>();
         private ThreadMachine()
         {
             _thread = new Thread(Run);
             _thread.Start();
-            _ShareBatches.Add(new Batch { ID=1,BucketCount=3, Recipe=new Recipe { PigmentA=20, PigmentB=3,PigmentC=4, PigmentD=4} });
+            
         }
         private void Run() {
             MachineState machineState = MachineState.waiting;
             MachinePainting machinePainting = new MachinePainting(ipaddress, port);
-            
+
 
             while (StopThread)
             {
-                switch (machineState){
+                switch (machineState) {
                     case MachineState.waiting:
                         if (Start == true)
                         {
@@ -47,7 +47,7 @@ namespace Labo08_Chevalley_Michaud
                             machineState = MachineState.askbucket;
                             Start = false;
                         }
-                            
+
                         break;
 
                     case MachineState.askbucket:
@@ -64,22 +64,24 @@ namespace Labo08_Chevalley_Michaud
                         break;
 
                     case MachineState.PaintA:
-                        if (Baches.Count>1)
+                        if (Baches.Count > 1)
                         {
 
                             dispensePaint(PigmentType.A, (int)(Baches[IndexBatch].Recipe.PigmentA * 100), machinePainting);
                             dispensePaint(PigmentType.B, (int)(Baches[IndexBatch].Recipe.PigmentB * 100), machinePainting);
                             dispensePaint(PigmentType.C, (int)(Baches[IndexBatch].Recipe.PigmentC * 100), machinePainting);
                             dispensePaint(PigmentType.D, (int)(Baches[IndexBatch].Recipe.PigmentD * 100), machinePainting);
-                            if (NumberBucket < Baches[0].BucketCount-1)
+                            if (NumberBucket < Baches[0].BucketCount - 1)
                             {
                                 NumberBucket++;
+                                NumberMadeBucket++;
                                 machineState = MachineState.askbucket;
                             }
                             else
                             {
                                 IndexBatch++;
-                                if (IndexBatch<Baches.Count)
+                                NumberMadeBucket++;
+                                if (IndexBatch < Baches.Count)
                                 {
                                     machineState = MachineState.askbucket;
                                 }
@@ -87,7 +89,7 @@ namespace Labo08_Chevalley_Michaud
                                 {
                                     machineState = MachineState.waiting;
                                 }
-                                
+
                             }
                         }
                         else
@@ -103,7 +105,7 @@ namespace Labo08_Chevalley_Michaud
             }
         }
 
-        private void dispensePaint(PigmentType type,int sleepDelay,MachinePainting machinePainting)
+        private void dispensePaint(PigmentType type, int sleepDelay, MachinePainting machinePainting)
         {
             if (sleepDelay > 0)
             {
@@ -133,6 +135,7 @@ namespace Labo08_Chevalley_Michaud
             }
         }
 
+
         private readonly object _lockNumberBucket = new object();
         private int _numberBucket;
         public int NumberBucket
@@ -153,8 +156,29 @@ namespace Labo08_Chevalley_Michaud
             }
         }
 
+        private readonly object _lockNumberMadeBucket = new object();
+        private int _numberMadeBucket;
+
+        public int NumberMadeBucket
+        {
+            get
+            {
+                lock (_lockNumberMadeBucket)
+                {
+                    return _numberMadeBucket;
+                }
+            }
+            set
+            {
+                lock (_lockNumberMadeBucket)
+                {
+                    _numberMadeBucket = value;
+                }
+            }
+        }
+
         private readonly object _lockStop = new object();
-        private  bool _stopThread = true;
+        private bool _stopThread = true;
         public bool StopThread
         {
             get
@@ -255,6 +279,18 @@ namespace Labo08_Chevalley_Michaud
                 {
                     _ShareBatches = value;
                 }
+            }
+        }
+
+        public int TotalBucketBatch
+        {
+            get {
+                int total = 0;
+                foreach (var batch in Baches)
+                {
+                    total += batch.BucketCount;
+                }
+                return total;
             }
         }
 

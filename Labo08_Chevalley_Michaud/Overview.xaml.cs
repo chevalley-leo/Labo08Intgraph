@@ -51,8 +51,8 @@ namespace Labo08_Chevalley_Michaud
             // Example: Update a label to show the current time
             if (ThreadMachine.Instance.Connected) { ConnectElips.Fill = new SolidColorBrush(Colors.Green); }
             else { ConnectElips.Fill = new SolidColorBrush(Colors.Red); }
-            
-
+            if(ThreadMachine.Instance.NumberBucket>0)
+                ProgressRingJob.Progress = ThreadMachine.Instance.NumberMadeBucket/ThreadMachine.Instance.NumberBucket;
         }
     } 
 }

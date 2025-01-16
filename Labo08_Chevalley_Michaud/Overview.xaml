@@ -7,11 +7,95 @@
 
              xmlns:local="clr-namespace:Labo08_Chevalley_Michaud"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" >
+             d:DesignHeight="450" d:DesignWidth="800" Background="#333">
 
-    <StackPanel>
-        <Button Height="28" Content="connect" Click="Button_Click" />
-        <Ellipse Name = "ConnectElips" Height="50" Width="50" Fill="Red" />
-        <Button Height="34" Content="Start" Click="Start_Click" />
-    </StackPanel>
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Left">
+            
+        
+        <GroupBox Header="Controle" DockPanel.Dock="Top" Margin="10" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="3" Height="28" Content="connect" Click="Button_Click" />
+                <TextBlock Grid.Row="0" Text="Temps Estimé :"/>
+                <TextBlock Grid.Row="1" Text="00:00:00"/>
+                
+
+            </Grid>
+            
+        </GroupBox>
+            <GroupBox Header="" Margin="10">
+                
+            </GroupBox>  
+        </DockPanel>
+        <GroupBox DockPanel.Dock="Right" Header="Status" Margin="10">
+            <Ellipse Grid.Row="3" Name="ConnectElips" Height="50" Width="50" Fill="Red" />
+         </GroupBox>
+        
+         <GroupBox Header="Controles" DockPanel.Dock="top" Margin="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="1" Grid.Column="0" Width="50" Height="50" Click="Start_Click" HorizontalAlignment="Center">
+                    <Viewbox>
+                        <Canvas Width="24" Height="24">
+                            <Path Data="M0,0 L0,24 L24,12 Z" Fill="White" />
+                        </Canvas>
+                    </Viewbox>
+                </Button>
+                <Button Grid.Row="1" Grid.Column="1" Width="50" Height="50" HorizontalAlignment="Center">
+                    <Viewbox>
+                        <Canvas Width="24" Height="24">
+                            <Path Data="M0,0 H10 V24 H0 Z M14,0 H24 V24 H14 Z" Fill="White" />
+                        </Canvas>
+                    </Viewbox>
+                </Button>
+
+                <Button Grid.Row="1" Grid.Column="2" Width="50" Height="50" HorizontalAlignment="Center">
+                    <Viewbox>
+                        <Canvas Width="24" Height="24">
+                            <Path Data="M0,0 H24 V24 H0 Z" Fill="White" />
+                        </Canvas>
+                    </Viewbox>
+                </Button>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Margin="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <ui:ProgressRing Grid.Column="2" Grid.RowSpan="3" Name="ProgressRingJob" Height="160" Width="160" />
+                <TextBlock  Grid.Column="0" Grid.Row="0" Text="Saux Produict:"/>
+                <TextBlock  Grid.Column="0" Grid.Row="1" Text="Saux Produict dans le bach:"/>
+                <TextBlock  Grid.Column="0" Grid.Row="2" Text="bach Produict"/>
+                <TextBlock  Grid.Column="1" Grid.Row="0" Text="00/00"/>
+                <TextBlock  Grid.Column="1" Grid.Row="1" Text="00/00"/>
+                <TextBlock  Grid.Column="1" Grid.Row="2" Text="00/00"/>
+            </Grid>
+        </GroupBox>
+        
+        
+    </DockPanel>
 </UserControl>
