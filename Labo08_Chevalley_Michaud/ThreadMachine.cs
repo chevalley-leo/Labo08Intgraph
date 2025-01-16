@@ -33,6 +33,7 @@ namespace Labo08_Chevalley_Michaud
             _thread = new Thread(Run);
             _thread.Start();
             
+            
         }
         private void Run() {
             MachineState machineState = MachineState.waiting;
@@ -67,7 +68,7 @@ namespace Labo08_Chevalley_Michaud
                         break;
 
                     case MachineState.PaintA:
-                        if (Baches.Count > 1)
+                        if (Baches.Count > 0)
                         {
 
                             dispensePaint(PigmentType.A, (int)(Baches[IndexBatch].Recipe.PigmentA * 100), machinePainting);
@@ -75,18 +76,20 @@ namespace Labo08_Chevalley_Michaud
                         machineState = MachineState.PaintB;
                         break;
                     case MachineState.PaintB:
-                         if (Baches.Count > 1)
+                         if (Baches.Count > 0)
+                         {
                             dispensePaint(PigmentType.B, (int)(Baches[IndexBatch].Recipe.PigmentB * 100), machinePainting);
+                         }   
                         machineState = MachineState.PaintC;
                         break;
                     case MachineState.PaintC:
-                        if (Baches.Count > 1)
+                        if (Baches.Count > 0)
                             dispensePaint(PigmentType.C, (int)(Baches[IndexBatch].Recipe.PigmentC * 100), machinePainting);
                         machineState = MachineState.PaintD;
                         break;
                             
                     case MachineState.PaintD:
-                        if (Baches.Count > 1)
+                        if (Baches.Count > 0)
                         {
                             dispensePaint(PigmentType.D, (int)(Baches[IndexBatch].Recipe.PigmentD * 100), machinePainting);
                             if (NumberBucket < Baches[0].BucketCount - 1)

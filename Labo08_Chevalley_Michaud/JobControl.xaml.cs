@@ -1,4 +1,5 @@
 ﻿using Labo06; // Assurez-vous d'inclure les bons espaces de noms
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
@@ -61,6 +62,7 @@ namespace Labo08_Chevalley_Michaud.Views
                 {
                     // Remplir les données dans le contrôle (ou autre affichage)
                     DisplayBatchInfo(batchList);
+                    LoadBatches(batchList.GetBatches());
                 }
                 else
                 {
