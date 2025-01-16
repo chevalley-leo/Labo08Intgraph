@@ -16,30 +16,38 @@ namespace Labo08_Chevalley_Michaud
         public MainWindow()
         {
             InitializeComponent();
-            //WriteDefaultPasswords(); // Appel de la méthode pour écrire les mots de passe
+            WriteDefaultPasswords(); // Appel de la méthode pour écrire les mots de passe
             LoadLoginPage();
         }
 
         private void LoadLoginPage()
         {
-            // Charger la page de connexion
             var loginPage = new LoginControl();
 
             // Connecter l'événement de connexion
             loginPage.OnLoginSuccess += HandleLoginSuccess;
+            loginPage.OnLogout += HandleLogout; // Ajouter l'événement de déconnexion
 
-            // Afficher le contrôle de connexion
+            // Afficher la page de connexion
             Connexion.Content = loginPage;
 
-            // Le reste de la page (Overview) ne sera pas affiché avant la connexion
-            OverviewContent.Content = null;
-            Job.Content = null;
+            // Masquer toutes les autres pages
+            OverviewContent.Visibility = Visibility.Collapsed;
+            Job.Visibility = Visibility.Collapsed;
 
-            // Mettre à jour l'état de connexion
+
+            // Mettre à jour le statut
             TxtStatus.Text = "Non connecté";
         }
 
-       /* private void WriteDefaultPasswords()
+        // Méthode de gestion de la déconnexion
+        private void HandleLogout()
+        {
+            // Recharger la page de connexion
+            LoadLoginPage();
+        }
+
+        private void WriteDefaultPasswords()
         {
             // Vérifie si le fichier existe déjà
             if (File.Exists(passwordFilePath))
@@ -85,7 +93,7 @@ namespace Labo08_Chevalley_Michaud
                 return builder.ToString();
             }
         }
-       */
+       
 
         private void LoadJobPage()
         {
@@ -97,7 +105,7 @@ namespace Labo08_Chevalley_Michaud
         private void HandleLoginSuccess(string profile)
         {
             currentUserProfile = profile;
-            TxtStatus.Text = $"Connecté en tant que : {profile}";
+            TxtStatus.Text = $"Connecté en tant ques : {profile}";
 
             LoadHomePage();
         }
@@ -107,12 +115,14 @@ namespace Labo08_Chevalley_Michaud
             // Une fois connecté, on peut afficher la page Overview
             var overviewPage = new Overview();
             OverviewContent.Content = overviewPage;
+            OverviewContent.Visibility = Visibility.Visible;
 
             // Vérification du profil de l'utilisateur
             if (currentUserProfile == "Administrateur" || currentUserProfile == "Chef d'atelier")
             {
                 // Si l'utilisateur est administrateur ou chef d'atelier, on lui permet d'accéder à JobControl
                 LoadJobPage();
+                Job.Visibility = Visibility.Visible;
 
  
                 // Désactiver le bouton Paramètres (Settings) pour l'opérateur

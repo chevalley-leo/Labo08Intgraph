@@ -17,15 +17,15 @@
         <StackPanel VerticalAlignment="Top" Margin="0,60,0,0">
             <StackPanel Orientation="Horizontal" Margin="0,10">
                 <ui:TextBlock Text="Opérateur :" Width="150" Foreground="White"/>
-                <PasswordBox x:Name="PwdOperator" Width="200"/>
+                <ui:PasswordBox x:Name="PwdOperator" Width="200"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10">
                 <ui:TextBlock Text="Chef d'atelier :" Width="150" Foreground="White"/>
-                <PasswordBox x:Name="PwdManager" Width="200"/>
+                <ui:PasswordBox x:Name="PwdManager" Width="200"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0,10">
                 <ui:TextBlock Text="Administrateur :" Width="150" Foreground="White"/>
-                <PasswordBox x:Name="PwdAdmin" Width="200"/>
+                <ui:PasswordBox x:Name="PwdAdmin" Width="200"/>
             </StackPanel>
 
             <Button Content="Sauvegarder" 

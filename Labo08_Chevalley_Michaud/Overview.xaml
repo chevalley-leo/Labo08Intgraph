@@ -59,28 +59,37 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Row="1" Grid.Column="0" Width="50" Height="50" Click="Start_Click" HorizontalAlignment="Center">
-                    <Viewbox>
-                        <Canvas Width="24" Height="24">
-                            <Path Data="M0,0 L0,24 L24,12 Z" Fill="White" />
-                        </Canvas>
-                    </Viewbox>
-                </Button>
-                <Button Grid.Row="1" Grid.Column="1" Width="50" Height="50" HorizontalAlignment="Center">
-                    <Viewbox>
-                        <Canvas Width="24" Height="24">
-                            <Path Data="M0,0 H10 V24 H0 Z M14,0 H24 V24 H14 Z" Fill="White" />
-                        </Canvas>
-                    </Viewbox>
-                </Button>
+                
+                <ui:Button Grid.Row="1"
+                           Grid.Column="0"
+                           Width="50"
+                           Height="50"
+                           Click="Start_Click"
+                           HorizontalAlignment="Center"
+                           Icon="{ui:SymbolIcon Symbol=Play48}"
+                           FontSize="30">
+                </ui:Button>
+                
+                <ui:Button Grid.Row="1"
+                           Grid.Column="1" Width="50"
+                           Height="50"
+                           HorizontalAlignment="Center"
+                           Icon="{ui:SymbolIcon Symbol=Pause48}"
+                           FontSize="30">
+            
+                </ui:Button>
 
-                <Button Grid.Row="1" Grid.Column="2" Width="50" Height="50" HorizontalAlignment="Center">
-                    <Viewbox>
-                        <Canvas Width="24" Height="24">
-                            <Path Data="M0,0 H24 V24 H0 Z" Fill="White" />
-                        </Canvas>
-                    </Viewbox>
-                </Button>
+                <ui:Button
+                           Grid.Row="1"
+                           Grid.Column="2"
+                           Width="50"
+                           Height="50"
+                           HorizontalAlignment="Center"
+                           Icon="{ui:SymbolIcon Symbol=Square48}"
+                           FontSize="30">
+
+
+                </ui:Button>
 
             </Grid>
         </GroupBox>

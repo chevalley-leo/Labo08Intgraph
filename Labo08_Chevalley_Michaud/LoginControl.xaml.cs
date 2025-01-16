@@ -9,6 +9,7 @@ namespace Labo08_Chevalley_Michaud.Views
     public partial class LoginControl : UserControl
     {
         public event Action<string> OnLoginSuccess; // Pour informer la MainWindow
+        public event Action OnLogout; // Déclenché lors de la déconnexion
         private readonly Dictionary<string, string> defaultPasswords = new();
 
         public LoginControl()
@@ -51,12 +52,27 @@ namespace Labo08_Chevalley_Michaud.Views
             if (defaultPasswords.ContainsKey(selectedProfile) && defaultPasswords[selectedProfile] == hashedInputPassword)
             {
                 OnLoginSuccess?.Invoke(selectedProfile); // Informe MainWindow
+                BtnLogin.Visibility = Visibility.Collapsed;
+                BtnLogout.Visibility = Visibility.Visible;
             }
             else
             {
                 MessageBox.Show("Mot de passe incorrect", "Erreur", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void BtnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            // Réinitialiser les champs et réafficher le formulaire de connexion
+            BtnLogin.Visibility = Visibility.Visible;
+            BtnLogout.Visibility = Visibility.Collapsed;
+            PwdBox.Clear();
+            CmbProfiles.SelectedIndex = 0;
+            LoadPasswordsFromFile("passwords.txt"); // Recharger les mots de passe
+
+            OnLogout?.Invoke(); // Informe MainWindow de la déconnexion
+        }
+
 
     }
 }

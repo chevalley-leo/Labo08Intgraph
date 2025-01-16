@@ -8,6 +8,7 @@ namespace Labo08_Chevalley_Michaud.Views
     public partial class SettingsWindow : Window
     {
         private const string PasswordFilePath = "passwords.txt";
+        private Dictionary<string, string> storedHashedPasswords = new();
 
         public SettingsWindow()
         {
@@ -21,42 +22,64 @@ namespace Labo08_Chevalley_Michaud.Views
                 return;
 
             var lines = File.ReadAllLines(PasswordFilePath);
-            var passwords = new Dictionary<string, string>();
             foreach (var line in lines)
             {
                 var parts = line.Split(':');
                 if (parts.Length == 2)
                 {
-                    passwords[parts[0]] = parts[1];
+                    storedHashedPasswords[parts[0]] = parts[1];
                 }
             }
 
-            if (passwords.ContainsKey("Opérateur"))
-                PwdOperator.Password = passwords["Opérateur"];
-            if (passwords.ContainsKey("Chef d'atelier"))
-                PwdManager.Password = passwords["Chef d'atelier"];
-            if (passwords.ContainsKey("Administrateur"))
-                PwdAdmin.Password = passwords["Administrateur"];
+            // Password fields are left empty for security reasons.
         }
 
         private void SavePasswords_Click(object sender, RoutedEventArgs e)
         {
-            var passwords = new Dictionary<string, string>
+            var newPasswords = new Dictionary<string, string>
     {
-        { "Opérateur", PasswordHasher.HashPassword(PwdOperator.Password) },
-        { "Chef d'atelier", PasswordHasher.HashPassword(PwdManager.Password) },
-        { "Administrateur", PasswordHasher.HashPassword(PwdAdmin.Password) }
+        { "Opérateur", PwdOperator.Password },
+        { "Chef d'atelier", PwdManager.Password },
+        { "Administrateur", PwdAdmin.Password }
     };
 
-            using (var writer = new StreamWriter(PasswordFilePath))
+            int changesCount = 0;
+
+            foreach (var role in new List<string> { "Opérateur", "Chef d'atelier", "Administrateur" })
             {
-                foreach (var pair in passwords)
+                if (!string.IsNullOrEmpty(newPasswords[role]))
                 {
-                    writer.WriteLine($"{pair.Key}:{pair.Value}");
+
+                        storedHashedPasswords[role] = PasswordHasher.HashPassword(newPasswords[role]);
+                        changesCount++; // Incrémente le compteur de changements
+                   
                 }
             }
 
-            MessageBox.Show("Les mots de passe ont été sauvegardés avec succès.", "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
+            if (changesCount > 0)
+            {
+                // Mise à jour du fichier de mots de passe
+                using (var writer = new StreamWriter(PasswordFilePath))
+                {
+                    foreach (var pair in storedHashedPasswords)
+                    {
+                        writer.WriteLine($"{pair.Key}:{pair.Value}");
+                    }
+                }
+
+                // Affichage du message approprié en fonction du nombre de changements
+                string message = changesCount == 1
+                    ? "Le mot de passe a été changé."
+                    : "Les mots de passe ont été changés.";
+                MessageBox.Show(message, "Succès", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                // Ferme la fenêtre de paramètres
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Aucun changement détecté dans les mots de passe.", "Information", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
 
     }
