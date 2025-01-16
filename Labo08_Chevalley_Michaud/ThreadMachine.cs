@@ -89,7 +89,6 @@ namespace Labo08_Chevalley_Michaud
                                 {
                                     machineState = MachineState.waiting;
                                 }
-
                             }
                         }
                         else

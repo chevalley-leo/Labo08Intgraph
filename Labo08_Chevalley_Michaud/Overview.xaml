@@ -25,7 +25,7 @@
                     <ColumnDefinition Width="auto"/>
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Row="3" Height="28" Content="connect" Click="Button_Click" />
+
                 <TextBlock Grid.Row="0" Text="Temps Estimé :"/>
                 <TextBlock Grid.Row="1" Text="00:00:00"/>
                 
@@ -33,7 +33,18 @@
             </Grid>
             
         </GroupBox>
-            <GroupBox Header="" Margin="10">
+            <GroupBox Header="" Margin="10" Padding="10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Height="28" Content="connect" Click="Button_Click" />
+                    <TextBlock Grid.Row="1" Text="vider convoyor:"/>
+                    <Button Grid.Row="3" Height="28" Content="vider" /> 
+                    
+                </Grid>
                 
             </GroupBox>  
         </DockPanel>
