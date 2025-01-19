@@ -42,7 +42,7 @@
                     </Grid.RowDefinitions>
                     <Button Grid.Row="0" Height="28" Content="connect" Click="Button_Click" />
                     <TextBlock Grid.Row="1" Text="vider convoyor:"/>
-                    <Button Grid.Row="3" Height="28" Content="vider" /> 
+                    <Button Grid.Row="3" Height="28" Content="vider" Click="Empty_Click"/> 
                     
                 </Grid>
                 
@@ -75,7 +75,8 @@
                            Height="50"
                            HorizontalAlignment="Center"
                            Icon="{ui:SymbolIcon Symbol=Pause48}"
-                           FontSize="30">
+                           FontSize="30" 
+                           Click="Pause_Click">
             
                 </ui:Button>
 
@@ -86,9 +87,8 @@
                            Height="50"
                            HorizontalAlignment="Center"
                            Icon="{ui:SymbolIcon Symbol=Square48}"
-                           FontSize="30">
-
-
+                           FontSize="30"
+                           Click="Stop_Click">
                 </ui:Button>
 
             </Grid>
@@ -110,9 +110,9 @@
                 <TextBlock  Grid.Column="0" Grid.Row="0" Text="Saux Produict:"/>
                 <TextBlock  Grid.Column="0" Grid.Row="1" Text="Saux Produict dans le bach:"/>
                 <TextBlock  Grid.Column="0" Grid.Row="2" Text="bach Produict"/>
-                <TextBlock  Grid.Column="1" Grid.Row="0" Text="00/00"/>
-                <TextBlock  Grid.Column="1" Grid.Row="1" Text="00/00"/>
-                <TextBlock  Grid.Column="1" Grid.Row="2" Text="00/00"/>
+                <TextBlock  Grid.Column="1" Grid.Row="0" Name="BucketTotal" Text="00/00"/>
+                <TextBlock  Grid.Column="1" Grid.Row="1" Name="BucketBatch" Text="00/00"/>
+                <TextBlock  Grid.Column="1" Grid.Row="2" Name="NumberBatch" Text="00/00"/>
             </Grid>
         </GroupBox>
         

@@ -42,7 +42,7 @@ namespace Labo08_Chevalley_Michaud
         }
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            ThreadMachine.Instance.Start = true;
+            ThreadMachine.Instance.RunState = RunningState.Run;
         }
 
         private void UpdateVisuals(object sender, EventArgs e)
@@ -52,7 +52,35 @@ namespace Labo08_Chevalley_Michaud
             if (ThreadMachine.Instance.Connected) { ConnectElips.Fill = new SolidColorBrush(Colors.Green); }
             else { ConnectElips.Fill = new SolidColorBrush(Colors.Red); }
             if(ThreadMachine.Instance.TotalBucketBatch>0)
-                ProgressRingJob.Progress = ThreadMachine.Instance.NumberMadeBucket/ThreadMachine.Instance.TotalBucketBatch;
+                ProgressRingJob.Progress = (ThreadMachine.Instance.NumberMadeBucket/ThreadMachine.Instance.TotalBucketBatch)*100;
+            if (ThreadMachine.Instance.Baches.Count > 0)
+            {
+                BucketTotal.Text = $"{ThreadMachine.Instance.NumberMadeBucket}/{ThreadMachine.Instance.TotalBucketBatch}";
+                BucketBatch.Text = $"{ThreadMachine.Instance.NumberBucket}/{ThreadMachine.Instance.Baches[ThreadMachine.Instance.IndexBatch].BucketCount}";
+                NumberBatch.Text = $"{ThreadMachine.Instance.IndexBatch}/{ThreadMachine.Instance.Baches.Count}";
+            }
+            else
+            {
+                BucketTotal.Text = $"--/--";
+                BucketBatch.Text = $"--/--";
+                NumberBatch.Text = $"--/--";
+            }
+
+        }
+
+        private void Pause_Click(object sender, RoutedEventArgs e)
+        {
+            ThreadMachine.Instance.RunState = RunningState.Pause;
+        }
+
+        private void Stop_Click(object sender, RoutedEventArgs e)
+        {
+            ThreadMachine.Instance.RunState = RunningState.Stop;
+        }
+
+        private void Empty_Click(object sender, RoutedEventArgs e)
+        {
+            ThreadMachine.Instance.RunState = RunningState.Empty;
         }
     } 
 }
